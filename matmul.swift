@@ -4,7 +4,7 @@ import Metal
 func parseCommandLineArguments() -> ([Float], Int, Int, [Float], Int, Int)? {
     let args = CommandLine.arguments
     guard args.count > 1 else {
-        print("Usage: MatrixMultiply widthA heightA widthB heightB matrixA_elements matrixB_elements")
+        print("Usage: matmul widthA heightA widthB heightB matrixA_elements matrixB_elements")
         return nil
     }
 
@@ -50,7 +50,7 @@ func metalMatrixMultiply(matrixA: [Float], widthA: Int, heightA: Int,
         return nil
     }
     let currentPath = FileManager.default.currentDirectoryPath
-    let filePath = "\(currentPath)/MatrixMultiply.metal"
+    let filePath = "\(currentPath)/matmul.metal"
     guard let shaderSource = try? String(contentsOfFile: filePath, encoding: .utf8) else {
         print("Failed to load shader file.")
         return nil
