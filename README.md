@@ -1,6 +1,6 @@
 # Matrix Multiplication using GPU shaders #
 
-this is a shader kernel program writen in swift and the metal shading language to perform matrix multiplication
+this is a kernel shader program writen in swift and the metal shader language to perform matrix multiplication
 utilizing the GPU.
 
 ## Usage ##
